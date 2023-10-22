@@ -3,6 +3,7 @@ import Register from "./pages/Register/Register";
 import Home from "./pages/Home/Home";
 import Movies from "./pages/Movies/Movies";
 import Sheet from "./pages/Sheet/Sheet";
+import NotFoundPage from "./pages/NotFound/NotFound";
 
 function AppRouter() {
   return (
@@ -13,6 +14,7 @@ function AppRouter() {
           <Route path="/register" element={<Register />} />
           <Route path="/movies" element={<Movies />} />
           <Route path="/sheet" element={<Sheet />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>
     </BrowserRouter>

@@ -2,7 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import style from "./home.module.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { config, getUrl } from "../API/variables";
+import { config, getUrl } from "../../API/variables";
 
 const Home = () => {
   const [user, setUser] = useState({
