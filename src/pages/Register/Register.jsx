@@ -44,7 +44,9 @@ const Register = () => {
   return (
     <>
       <div className="container">
-        <h1 className="title has-text-light">Tech Challenge - FIAP</h1>
+        <h1 className="title has-text-light">
+          Tech Challenge - <span className="has-text-danger">FIAP</span>
+        </h1>
         <h2 className="subtitle has-text-light">Registre-se</h2>
         <section className="section">
           <form className={style.form} onSubmit={handleSubmit}>

@@ -28,7 +28,10 @@ export default function Movies() {
   return (
     <section className="container">
       <div className="section">
-        <h1 className="title has-text-light">Escolha seus filmes e séries favoritos!</h1>
+        <h1 className="title has-text-light">
+          Tech Challenge - <span className="has-text-danger">FIAP</span>
+        </h1>
+        <h2 className="subtitle has-text-light">Escolha seus filmes e séries favoritos!</h2>
         <div className={style.cardContainer}>
           {library.map((item) => (
             <div key={item.id} className="card mgb-large">
