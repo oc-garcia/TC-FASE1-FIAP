@@ -63,7 +63,7 @@ const Home = () => {
   return (
     <>
       <div className="container">
-        <h1 className="title has-text-light	">Tech Challenge - FIAP</h1>
+        <h1 className="title has-text-light">Tech Challenge - FIAP</h1>
         <h2 className="subtitle has-text-light	">Login</h2>
         <section className="section">
           <form className={style.form} onSubmit={handleSubmit}>

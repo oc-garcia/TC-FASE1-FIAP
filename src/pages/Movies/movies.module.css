@@ -1,0 +1,16 @@
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.movieImg {
+  height: 20rem !important;
+  width: 40rem !important;
+}
+
+.pin {
+  cursor: pointer !important;
+}
