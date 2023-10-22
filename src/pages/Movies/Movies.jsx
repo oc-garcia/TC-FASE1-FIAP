@@ -80,7 +80,7 @@ export default function Movies() {
         <div className="hero is-link">
           <div className="hero-body">
             <p className="title">Planilha de favoritos</p>
-            <p className="subtitle">Acesse aqui</p>
+            <p className="subtitle">Acesse aqui!</p>
           </div>
         </div>
       </Link>
