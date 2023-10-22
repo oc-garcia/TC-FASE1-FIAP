@@ -18,17 +18,18 @@ const Home = () => {
   const checkUserInApi = (user, apiUsers) => {
     setLoginError(false);
     if (user.user === "" && user.password === "") {
+      setLoginError(true);
       return false;
     }
     for (const apiUser of apiUsers) {
       if (apiUser.user === user.user) {
         if (apiUser.password === user.password) {
+          setLoginError(false);
           return navigate("/movies");
         }
       }
     }
     setLoginError(true);
-    console.log(loginError);
     return false;
   };
 
