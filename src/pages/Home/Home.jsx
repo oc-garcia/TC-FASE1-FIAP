@@ -17,6 +17,9 @@ const Home = () => {
 
   const checkUserInApi = (user, apiUsers) => {
     setLoginError(false);
+    if (user.user === "" && user.password === "") {
+      return false;
+    }
     for (const apiUser of apiUsers) {
       if (apiUser.user === user.user) {
         if (apiUser.password === user.password) {
