@@ -62,7 +62,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container p-2">
         <h1 className="title has-text-light">
           Tech Challenge - <span className="has-text-danger">FIAP</span>
         </h1>

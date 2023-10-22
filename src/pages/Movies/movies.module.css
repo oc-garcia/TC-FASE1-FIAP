@@ -1,3 +1,9 @@
+.sectionHeaderContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
 .cardContainer {
   display: flex;
   flex-wrap: wrap;
@@ -11,6 +17,3 @@
   width: 40rem !important;
 }
 
-.pin {
-  cursor: pointer !important;
-}
