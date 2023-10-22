@@ -73,7 +73,7 @@ const Register = () => {
             </div>
             {loginError && (
               <div className="field">
-                <p className="help is-danger">Usuário já cadastrado</p>
+                <p className="help is-danger">Usuário já cadastrado ou inválido!</p>
               </div>
             )}
             <button type="submit" className="button is-primary">
