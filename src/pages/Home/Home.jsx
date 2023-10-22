@@ -98,7 +98,7 @@ const Home = () => {
         </section>
         <div className="section">
           <h2 className="subtitle has-text-light">Não possuí cadastro?</h2>
-          <Link className="button is-primary has-text-weight-bold" to={"/register"}>
+          <Link className="button is-link has-text-weight-bold" to={"/register"}>
             Registre-se
           </Link>
         </div>
