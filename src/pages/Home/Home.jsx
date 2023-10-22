@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import style from "./home.module.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { config, getUrl } from "../API/variables";
 
 const Home = () => {
   const [user, setUser] = useState({
@@ -42,16 +43,7 @@ const Home = () => {
   useEffect(() => {
     const getUsers = async () => {
       try {
-        const config = {
-          headers: {
-            apiKey:
-              "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFhemxmc3h4bmJ2Y3VwcXRxcXhmIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY5Njg2MDU1MywiZXhwIjoyMDEyNDM2NTUzfQ.g-AmyyofnSMuew141w9ZM_TgpX23-tAKctFPOuoameI",
-          },
-        };
-        const response = await axios.get(
-          "https://qazlfsxxnbvcupqtqqxf.supabase.co/rest/v1/ctj_autorizacao?select=*",
-          config
-        );
+        const response = await axios.get(getUrl, config);
         setApiUsers(response.data);
       } catch (error) {
         console.error(error);
