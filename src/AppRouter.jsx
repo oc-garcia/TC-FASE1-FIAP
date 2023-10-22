@@ -7,7 +7,7 @@ import Sheet from "./pages/Sheet/Sheet";
 function AppRouter() {
   return (
     <BrowserRouter>
-      <main>
+      <main className="has-background-dark">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/register" element={<Register />} />

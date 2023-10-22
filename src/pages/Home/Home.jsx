@@ -63,12 +63,12 @@ const Home = () => {
   return (
     <>
       <div className="container">
-        <h1 className="title">Tech Challenge - FIAP</h1>
-        <h2 className="subtitle">Login</h2>
+        <h1 className="title has-text-light	">Tech Challenge - FIAP</h1>
+        <h2 className="subtitle has-text-light	">Login</h2>
         <section className="section">
           <form className={style.form} onSubmit={handleSubmit}>
             <div className="field">
-              <label className="label">Usuário</label>
+              <label className="label has-text-light">Usuário</label>
               <input
                 className={`input ${loginError ? "is-danger" : ""}`}
                 type="text"
@@ -79,7 +79,7 @@ const Home = () => {
               />
             </div>
             <div className="field">
-              <label className="label">Senha</label>
+              <label className="label has-text-light">Senha</label>
               <input
                 className={`input ${loginError ? "is-danger" : ""}`}
                 type="password"
@@ -90,15 +90,15 @@ const Home = () => {
             </div>
             {loginError && (
               <div className="field">
-                <p className="help is-danger">Usuário não encontrado!</p>
+                <p className="help is-danger has-text-weight-bold">Usuário não encontrado!</p>
               </div>
             )}
-            <button className="button is-primary">Login</button>
+            <button className="button is-primary has-text-weight-bold">Login</button>
           </form>
         </section>
         <div className="section">
-          <h2 className="subtitle">Não possuí cadastro?</h2>
-          <Link className="button is-primary" to={"/register"}>
+          <h2 className="subtitle has-text-light">Não possuí cadastro?</h2>
+          <Link className="button is-primary has-text-weight-bold" to={"/register"}>
             Registre-se
           </Link>
         </div>

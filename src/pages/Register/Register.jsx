@@ -44,12 +44,12 @@ const Register = () => {
   return (
     <>
       <div className="container">
-        <h1 className="title">Tech Challenge - FIAP</h1>
-        <h2 className="subtitle">Registre-se</h2>
+        <h1 className="title has-text-light">Tech Challenge - FIAP</h1>
+        <h2 className="subtitle has-text-light">Registre-se</h2>
         <section className="section">
           <form className={style.form} onSubmit={handleSubmit}>
             <div className="field">
-              <label className="label">Username</label>
+              <label className="label has-text-light">Usuário</label>
               <input
                 className={`input ${loginError ? "is-danger" : ""}`}
                 type="text"
@@ -61,7 +61,7 @@ const Register = () => {
               />
             </div>
             <div className="field">
-              <label className="label">Password</label>
+              <label className="label has-text-light">Senha</label>
               <input
                 className={`input ${loginError ? "is-danger" : ""}`}
                 type="password"
@@ -73,10 +73,10 @@ const Register = () => {
             </div>
             {loginError && (
               <div className="field">
-                <p className="help is-danger">Usuário já cadastrado ou inválido!</p>
+                <p className="help is-danger has-text-weight-bold">Usuário já cadastrado ou inválido!</p>
               </div>
             )}
-            <button type="submit" className="button is-primary">
+            <button type="submit" className="button is-primary has-text-weight-bold">
               Cadastre-se
             </button>
           </form>
