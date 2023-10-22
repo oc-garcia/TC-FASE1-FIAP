@@ -34,8 +34,7 @@ export default function Movies() {
             <h2 className="cardTitle">{item.Title}</h2>
             <p>{item.Plot}</p>
             <img className={style.movieImg} src={item.Images[0]} />
-            <PushPin size={96} color="#58e8d1" />
-            <PushPinSlash size={96} color="#58e8d1" />
+            {item.favorite ? <PushPinSlash size={96} color="#58e8d1" /> : <PushPin size={96} color="#58e8d1" />}
           </div>
         ))}
       </div>
