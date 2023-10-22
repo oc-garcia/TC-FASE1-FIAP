@@ -9,7 +9,10 @@ const Register = () => {
     password: "",
   });
 
+  const [loginError, setLoginError] = useState(false);
+
   const postNewUser = async (data) => {
+    setLoginError(false);
     try {
       const config = {
         headers: {
@@ -26,6 +29,7 @@ const Register = () => {
       navigate("/");
     } catch (error) {
       console.error(error);
+      setLoginError(true);
     }
   };
 
@@ -47,7 +51,7 @@ const Register = () => {
             <div className="field">
               <label className="label">Username</label>
               <input
-                className="input"
+                className={`input ${loginError ? "is-danger" : ""}`}
                 type="text"
                 placeholder="example@email.com"
                 name="user"
@@ -59,7 +63,7 @@ const Register = () => {
             <div className="field">
               <label className="label">Password</label>
               <input
-                className="input"
+                className={`input ${loginError ? "is-danger" : ""}`}
                 type="password"
                 name="password"
                 onChange={(event) => {
@@ -67,6 +71,11 @@ const Register = () => {
                 }}
               />
             </div>
+            {loginError && (
+              <div className="field">
+                <p className="help is-danger">Usuário já cadastrado</p>
+              </div>
+            )}
             <button type="submit" className="button is-primary">
               Cadastre-se
             </button>
