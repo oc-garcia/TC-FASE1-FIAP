@@ -1,14 +1,12 @@
 import { Link, useNavigate } from "react-router-dom";
 import style from "./home.module.css";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { config, getUrl } from "../../API/variables";
+import { UserContext } from "../../context/user";
 
 const Home = () => {
-  const [user, setUser] = useState({
-    user: "",
-    password: "",
-  });
+  const { user, handleUser } = useContext(UserContext);
 
   const navigate = useNavigate();
 
@@ -26,6 +24,11 @@ const Home = () => {
       if (apiUser.user === user.user) {
         if (apiUser.password === user.password) {
           setLoginError(false);
+          handleUser({
+            user: apiUser.user,
+            password: apiUser.password,
+          });
+          console.log(user);
           return navigate("/movies");
         }
       }
@@ -37,7 +40,7 @@ const Home = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(apiUsers);
-    console.log(checkUserInApi(user, apiUsers));
+    checkUserInApi(user, apiUsers);
   };
 
   useEffect(() => {
@@ -68,7 +71,7 @@ const Home = () => {
                 type="text"
                 placeholder="example@email.com"
                 onChange={(event) => {
-                  setUser({ ...user, user: event.target.value });
+                  handleUser({ ...user, user: event.target.value });
                 }}
               />
             </div>
@@ -78,7 +81,7 @@ const Home = () => {
                 className={`input ${loginError ? "is-danger" : ""}`}
                 type="password"
                 onChange={(event) => {
-                  setUser({ ...user, password: event.target.value });
+                  handleUser({ ...user, password: event.target.value });
                 }}
               />
             </div>
