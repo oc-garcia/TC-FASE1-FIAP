@@ -26,6 +26,50 @@ export default function Movies() {
   //   return setFavorite(newList);
   // }
 
+  function addFavorite(movie){
+    const data = {
+      user: "emailuser",
+      filme: "Shrek",
+      imagem:
+        "https://images-na.ssl-images-amazon.com/images/M/MV5BMjEyOTYyMzUxNl5BMl5BanBnXkFtZTcwNTg0MTUzNA@@._V1_SX1500_CR0,0,1500,999_AL_.jpg"
+    };
+
+    // Add one line to the sheet
+    fetch(
+      "https://sheet.best/api/sheets/715ca2da-eb68-4fa4-bbf6-dad283a4b056",
+      {
+        method: "POST",
+        mode: "cors",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+      }
+    )
+      .then((r) => r.json())
+      .then((data) => {
+        // The response comes here
+        console.log(data);
+      })
+      .catch((error) => {
+        // Errors are reported there
+        console.log(error);
+      });
+
+    //get all from sheet
+    fetch(
+      "https://sheet.best/api/sheets/715ca2da-eb68-4fa4-bbf6-dad283a4b056"
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+    console.log({ response });
+  }
+
   return (
     <section className="container py-2">
       <div className={style.sectionHeaderContainer}>
