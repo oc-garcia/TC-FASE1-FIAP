@@ -7,7 +7,7 @@ O Tech Challenge é uma parte essencial da avaliação do programa Pós Tech - C
 Durante este projeto, iremos embarcar em uma jornada emocionante para criar um sistema de gerenciamento de filmes repleto de funcionalidades inovadoras. Exploraremos um universo cinematográfico e aplicaremos as habilidades e os insights adquiridos ao longo do curso para desenvolver uma plataforma que oferecerá uma experiência excepcional de descoberta e gestão de filmes.
 
 ## Status do Projeto
-O projeto será dividio em 5 fases e está com término previsto para jun/2023.
+O projeto está atualmente em andamento e está planejado para ser concluído em junho de 2023. Ele é dividido em 5 fases, cada uma com objetivos específicos, que serão divulgados ao decorrer do curso:
 - [x] Fase 1 - Tela de registro, tela de login, integração com APIs de um backend disponibilizadas pelo professor e integração para notificação ao escolher um filme.
 - [ ] Fase 2 - 
 - [ ] Fase 3 - 
