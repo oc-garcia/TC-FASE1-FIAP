@@ -29,6 +29,7 @@ const Home = () => {
             password: apiUser.password,
           });
           console.log(user);
+          sessionStorage.setItem('user', user.user);
           return navigate("/movies");
         }
       }
