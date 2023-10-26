@@ -1,7 +1,8 @@
 # Tech Challenge - FIAP
+### Turma 1CTJ - Grupo B
 
 ## Decrição
-O Tech Challenge é uma parte essencial da avaliação do programa Pós Tech - Coding Tech Journey, oferecido pela renomada instituição de ensino FIAP - Faculdade de Informática e Administração Paulista. Este desafio representa a culminação de todo o conhecimento adquirido ao longo do programa.
+O Tech Challenge é uma parte essencial da avaliação do programa Pós Tech - Coding & Tech Journey, oferecido pela renomada instituição de ensino FIAP - Faculdade de Informática e Administração Paulista. Este desafio representa a culminação de todo o conhecimento adquirido ao longo do programa.
 
 Durante este projeto, iremos embarcar em uma jornada emocionante para criar um sistema de gerenciamento de filmes repleto de funcionalidades inovadoras. Exploraremos um universo cinematográfico e aplicaremos as habilidades e os insights adquiridos ao longo do curso para desenvolver uma plataforma que oferecerá uma experiência excepcional de descoberta e gestão de filmes.
 
