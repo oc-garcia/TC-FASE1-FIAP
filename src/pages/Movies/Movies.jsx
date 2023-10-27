@@ -2,10 +2,19 @@ import style from "./movies.module.css";
 import data from "../../db/movies.json";
 import axios from "axios";
 import { PushPin, PushPinSlash } from "@phosphor-icons/react";
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect, useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { UserContext } from "../../context/user";
 
 export default function Movies() {
+  const { authenticated } = useContext(UserContext);
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (!authenticated) {
+      navigate("/");
+    }
+  });
+
   const library = data;
   const user = sessionStorage.getItem("user");
 
@@ -25,10 +34,7 @@ export default function Movies() {
     };
 
     axios
-      .post(
-        "https://sheet.best/api/sheets/715ca2da-eb68-4fa4-bbf6-dad283a4b056",
-        data
-      )
+      .post("https://sheet.best/api/sheets/715ca2da-eb68-4fa4-bbf6-dad283a4b056", data)
       .then(function (response) {
         console.log("post concluido", response);
       })
@@ -39,9 +45,7 @@ export default function Movies() {
 
   function deleteFavorite(movie) {
     axios
-      .delete(
-        `https://sheet.best/api/sheets/715ca2da-eb68-4fa4-bbf6-dad283a4b056/search?id=${movie.id}&user=${user}`
-      )
+      .delete(`https://sheet.best/api/sheets/715ca2da-eb68-4fa4-bbf6-dad283a4b056/search?id=${movie.id}&user=${user}`)
       .then(function (response) {
         console.log("delete concluido", response);
       })
@@ -52,9 +56,7 @@ export default function Movies() {
 
   function getFavorite() {
     axios
-      .get(
-        `https://sheet.best/api/sheets/715ca2da-eb68-4fa4-bbf6-dad283a4b056/search?user=${user}`
-      )
+      .get(`https://sheet.best/api/sheets/715ca2da-eb68-4fa4-bbf6-dad283a4b056/search?user=${user}`)
       .then(function (response) {
         let array = [];
         response.data.map((movie) => {
@@ -90,9 +92,7 @@ export default function Movies() {
           <h1 className="title has-text-light">
             Tech Challenge - <span className="has-text-danger">FIAP</span>
           </h1>
-          <h2 className="subtitle has-text-light">
-            Escolha seus filmes e séries favoritos!
-          </h2>
+          <h2 className="subtitle has-text-light">Escolha seus filmes e séries favoritos!</h2>
         </div>
         <div className={style.sectionHeaderLink}>
           <a className="button is-link" href="#sheet">
@@ -122,8 +122,7 @@ export default function Movies() {
                     className="is-clickable"
                     onClick={() => {
                       toggleFavorite(item);
-                    }}
-                  >
+                    }}>
                     {favorites.find((id) => id === item.id) ? (
                       <PushPinSlash size={40} color="hsl(348, 100%, 61%)" />
                     ) : (

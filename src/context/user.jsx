@@ -12,5 +12,15 @@ export const UserProvider = ({ children }) => {
   const handleUser = (userMatch) => {
     setUser(userMatch);
   };
-  return <UserContext.Provider value={{ user, handleUser }}>{children}</UserContext.Provider>;
+
+  const [authenticated, setAuthenticated] = useState(false);
+
+  const handleAuthentication = (value) => {
+    setAuthenticated(value);
+  };
+  return (
+    <UserContext.Provider value={{ user, handleUser, authenticated, handleAuthentication }}>
+      {children}
+    </UserContext.Provider>
+  );
 };

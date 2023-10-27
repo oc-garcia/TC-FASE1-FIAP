@@ -6,7 +6,7 @@ import { config, getUrl } from "../../API/variables";
 import { UserContext } from "../../context/user";
 
 const Home = () => {
-  const { user, handleUser } = useContext(UserContext);
+  const { user, handleUser, handleAuthentication } = useContext(UserContext);
 
   const navigate = useNavigate();
 
@@ -29,11 +29,13 @@ const Home = () => {
             password: apiUser.password,
           });
           console.log(user);
-          sessionStorage.setItem('user', user.user);
+          sessionStorage.setItem("user", user.user);
+          handleAuthentication(true);
           return navigate("/movies");
         }
       }
     }
+    handleAuthentication(false);
     setLoginError(true);
     return false;
   };
