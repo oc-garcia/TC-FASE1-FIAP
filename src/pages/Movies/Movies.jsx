@@ -1,10 +1,11 @@
 import style from "./movies.module.css";
 import data from "../../db/movies.json";
 import axios from "axios";
-import { PushPin, PushPinSlash } from "@phosphor-icons/react";
+import { Heart } from "@phosphor-icons/react";
 import { useState, useEffect, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from "../../context/user";
+
 
 export default function Movies() {
   const { authenticated } = useContext(UserContext);
@@ -124,9 +125,9 @@ export default function Movies() {
                       toggleFavorite(item);
                     }}>
                     {favorites.find((id) => id === item.id) ? (
-                      <PushPinSlash size={40} color="hsl(348, 100%, 61%)" />
+                      <Heart size={32} color="#f5000c" weight="fill" />
                     ) : (
-                      <PushPin size={40} color="hsl(171, 100%, 41%)" />
+                      <Heart size={32} color="#f5000c" weight="light" />
                     )}
                   </div>
                 </div>
