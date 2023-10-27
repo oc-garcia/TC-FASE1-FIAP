@@ -22,7 +22,11 @@ https://tc-fase-1-fiap.vercel.app/
 
 ## Tecnologias Utilizadas
 * React
-* ...
+* Axios
+* Bulma
+* Phosphor-Icons
+* Google Sheet Macros
+* Sheet Best
 
 ## Autores
 
