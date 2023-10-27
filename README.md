@@ -30,7 +30,7 @@ https://tc-fase-1-fiap.vercel.app/
 
 ## Autores
 
-| [<img loading="lazy" src="https://avatars.githubusercontent.com/u/139759865?v=4" width=115 height=115><br><sub>Alan Salvaterra</sub>](https://github.com/alansalvaterra) |  [<img loading="lazy" src="https://media.licdn.com/dms/image/D4E03AQFp26tKkTsDsg/profile-displayphoto-shrink_800_800/0/1691521758592?e=1703721600&v=beta&t=6BeBuheGD2X3VmevYRYjQY45tGNB4sbBdISg4R_9g24" width=115 height=115><br><sub>Kevin Façanha</sub>](https://github.com/kevinfacanha) |  [<img loading="lazy" src="https://avatars.githubusercontent.com/u/112664923?v=4" width=115 height=115><br><sub>Otávio Garcia</sub>](https://github.com/oc-garcia) | [<img loading="lazy" src="https://avatars.githubusercontent.com/u/48560899?v=4" width=115 height=115><br><sub>Rodrigo Carvalho</sub>](https://github.com/DrigoCarvalho) |
+| [<img loading="lazy" src="https://avatars.githubusercontent.com/u/139759865?v=4" width=115 height=115><br><sub>Alan Salvaterra</sub>](https://github.com/alansalvaterra) |  [<img loading="lazy" src="https://media.licdn.com/dms/image/D4E03AQFp26tKkTsDsg/profile-displayphoto-shrink_800_800/0/1691521758592?e=1703721600&v=beta&t=6BeBuheGD2X3VmevYRYjQY45tGNB4sbBdISg4R_9g24" width=115 height=115><br><sub>Kevin Façanha</sub>](https://github.com/kevinfacanha) |  [<img loading="lazy" src="https://avatars.githubusercontent.com/u/112664923?v=4" width=115 height=115><br><sub>Octávio Garcia</sub>](https://github.com/oc-garcia) | [<img loading="lazy" src="https://avatars.githubusercontent.com/u/48560899?v=4" width=115 height=115><br><sub>Rodrigo Carvalho</sub>](https://github.com/DrigoCarvalho) |
 | :---: | :---: | :---: | :---: |
 
 
