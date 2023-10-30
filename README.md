@@ -15,18 +15,45 @@ O projeto está atualmente em andamento e está planejado para ser concluído em
 - [ ] Fase 5 - 
 
 ## Acesso ao projeto
+### Acesso online
 
-Você pode acessar o projeto online através do link:<br>
-https://tc-fase-1-fiap.vercel.app/
+Você pode acessar o projeto online através do link abaixo:
+
+[**Tech Challenge - 1CTJ - Grupo B**](https://tc-fase-1-fiap.vercel.app/)
+
+### Acesso em seu ambiente de desenvolvimento local
+
+Pré requisitos:
+- **Node.js:** Se você ainda não o possui, você pode baixá-lo em [nodejs.org](https://nodejs.org/).
+- **Git:** Caso ainda não o tenha, você pode fazer o download em [git-scm.com](https://git-scm.com/).
+
+**1º Passo** - Clonar o repositório
+
+Abra seu terminal e clone o repositório para o seu ambiente local usando o seguinte comando:
+
+    git clone https://github.com/oc-garcia/TC-FASE1-FIAP.git
+
+**2º Passo** - Instale as dependências do projeto com o seguinte comando:
+
+    npm i
+
+**3º Passo** - Inicie o servidor de desenvolvimento:
+
+    npm run dev
+
+**4º Passo** - Após a inicialização, seu projeto estará disponível em seu navegador no endereço:
+
+    http://localhost:5173/
 
 
 ## Tecnologias Utilizadas
 * React
+* Vite
 * Axios
 * Bulma
 * Phosphor-Icons
 * Google Sheet Macros
-* Sheet Best
+* sheet.best
 
 ## Autores
 
